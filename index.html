@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>DeepSearch for Windows</title>
+</head>
+<body>
+
+  <header>
+    <h1>DeepSearch for Windows</h1>
+    <p>Boost your productivity and streamline your workflow with DeepSearch — designed exclusively for Windows users.</p>
+  </header>
+
+  <section class="features">
+    <h2>Features That Outshine Windows Search</h2>
+    <ul>
+      <li>🔍 Full content-based file searching (search inside documents)</li>
+      <li>⚡ Lightning-fast search on large datasets</li>
+      <li>📂 Supports multiple file types like .txt, .doc, and more</li>
+      <li>🔐 Keeps your data private with local secure storage</li>
+      <li>🎯 Accurate and relevant results with advanced indexing</li>
+      <li>🌙 Built-in Dark Mode for comfortable night use</li>
+    </ul>
+  
+    <h2 style="margin-top:60px;">Compared to Windows Search</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Windows Search</th>
+          <th>SuperApp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>File name search</td>
+          <td>✅</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Content-based search</td>
+          <td>🚫 Limited</td>
+          <td>✅ Full content indexing</td>
+        </tr>
+        <tr>
+          <td>Speed (large datasets)</td>
+          <td>⚠️ Slower</td>
+          <td>⚡ Optimized & Fast</td>
+        </tr>
+        <tr>
+          <td>File format support</td>
+          <td>⚠️ Basic</td>
+          <td>✅ Extensive (.txt, .doc, etc.)</td>
+        </tr>
+        <tr>
+          <td>Local storage privacy</td>
+          <td>⚠️ OS-level only</td>
+          <td>🔐 App-level secure access</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+
+  <section class="version-section">
+    <h2>Choose Your Version</h2>
+    <div class="version-buttons">
+      <button class="download-btn" onclick="download('alpha')">🧪 Alpha Version</button>
+      <button class="download-btn" onclick="download('stable')">✅ Stable Version</button>
+    </div>
+    <div class="msg" id="message"></div>
+  </section>
+
+  <script>
+    function download(version) {
+      const msg = document.getElementById('message');
+      let versionName = version === 'alpha' ? 'Alpha Version' : 'Stable Version';
+      msg.textContent = `Preparing ${versionName} download...`;
+      setTimeout(() => {
+        msg.textContent = `${versionName} download started!`;
+        // window.location.href = 'downloads/SuperApp-' + version.charAt(0).toUpperCase() + version.slice(1) + '.exe';
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
